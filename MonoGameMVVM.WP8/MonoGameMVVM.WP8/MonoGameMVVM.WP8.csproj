@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A8662D9-B0BD-4211-A00B-514544512C83}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoGameMVVM.WP8</RootNamespace>
+    <AssemblyName>MonoGameMVVM.WP8</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Helpers\IExecuteWithObject.cs">
+      <Link>Helpers\IExecuteWithObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Helpers\WeakAction.cs">
+      <Link>Helpers\WeakAction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Helpers\WeakActionGeneric.cs">
+      <Link>Helpers\WeakActionGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Ioc\ISimpleIoc.cs">
+      <Link>Ioc\ISimpleIoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Ioc\PreferredConstructor.cs">
+      <Link>Ioc\PreferredConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Ioc\SimpleIoc.cs">
+      <Link>Ioc\SimpleIoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\IView.cs">
+      <Link>IView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\LocatorBase.cs">
+      <Link>LocatorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Messenger\IMessenger.cs">
+      <Link>Messenger\IMessenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Messenger\MessageBase.cs">
+      <Link>Messenger\MessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\Messenger\Messenger.cs">
+      <Link>Messenger\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\NavigationService\INavigationService.cs">
+      <Link>NavigationService\INavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\NavigationService\NavigationService.cs">
+      <Link>NavigationService\NavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\ScreenManager\IScreenManager.cs">
+      <Link>ScreenManager\IScreenManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\ScreenManager\ScreenManager.cs">
+      <Link>ScreenManager\ScreenManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\DrawingContext.cs">
+      <Link>UI\Adapters\Graphics\DrawingContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\PrimitivesService.cs">
+      <Link>UI\Adapters\Graphics\PrimitivesService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\RectExtensions.cs">
+      <Link>UI\Adapters\Graphics\RectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\Renderer.cs">
+      <Link>UI\Adapters\Graphics\Renderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\SpriteBatchAdapter.cs">
+      <Link>UI\Adapters\Graphics\SpriteBatchAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\SpriteFontAdapter.cs">
+      <Link>UI\Adapters\Graphics\SpriteFontAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\SpriteFontJob.cs">
+      <Link>UI\Adapters\Graphics\SpriteFontJob.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\SpriteImageJob.cs">
+      <Link>UI\Adapters\Graphics\SpriteImageJob.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\SpriteTextureJob.cs">
+      <Link>UI\Adapters\Graphics\SpriteTextureJob.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\Texture2DAdapter.cs">
+      <Link>UI\Adapters\Graphics\Texture2DAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Graphics\ViewportExtensions.cs">
+      <Link>UI\Adapters\Graphics\ViewportExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Adapters\Input\InputManager.cs">
+      <Link>UI\Adapters\Input\InputManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Border.cs">
+      <Link>UI\Controls\Border.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Button.cs">
+      <Link>UI\Controls\Button.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Canvas.cs">
+      <Link>UI\Controls\Canvas.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\ColumnDefinition.cs">
+      <Link>UI\Controls\ColumnDefinition.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\ContentControl.cs">
+      <Link>UI\Controls\ContentControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Control.cs">
+      <Link>UI\Controls\Control.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\DefinitionBase.cs">
+      <Link>UI\Controls\DefinitionBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Grid.cs">
+      <Link>UI\Controls\Grid.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Image.cs">
+      <Link>UI\Controls\Image.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\ItemsControl.cs">
+      <Link>UI\Controls\ItemsControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Orientation.cs">
+      <Link>UI\Controls\Orientation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Panel.cs">
+      <Link>UI\Controls\Panel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Primitives\ButtonBase.cs">
+      <Link>UI\Controls\Primitives\ButtonBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Primitives\IScrollInfo.cs">
+      <Link>UI\Controls\Primitives\IScrollInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\Primitives\ToggleButton.cs">
+      <Link>UI\Controls\Primitives\ToggleButton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\RootElement.cs">
+      <Link>UI\Controls\RootElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\RowDefinition.cs">
+      <Link>UI\Controls\RowDefinition.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\ScrollContentPresenter.cs">
+      <Link>UI\Controls\ScrollContentPresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\ScrollViewer.cs">
+      <Link>UI\Controls\ScrollViewer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\StackPanel.cs">
+      <Link>UI\Controls\StackPanel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\StretchDirection.cs">
+      <Link>UI\Controls\StretchDirection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\TextBlock.cs">
+      <Link>UI\Controls\TextBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Controls\VirtualizingStackPanel.cs">
+      <Link>UI\Controls\VirtualizingStackPanel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\BindingFactory.cs">
+      <Link>UI\Data\BindingFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\BindingResolutionMode.cs">
+      <Link>UI\Data\BindingResolutionMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\IBinding.cs">
+      <Link>UI\Data\IBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\IDualChannel.cs">
+      <Link>UI\Data\IDualChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\INotifyPropertyChanged.cs">
+      <Link>UI\Data\INotifyPropertyChanged.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\IOneWayToSourceBinding.cs">
+      <Link>UI\Data\IOneWayToSourceBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\OneWayBinding.cs">
+      <Link>UI\Data\OneWayBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\OneWayReactivePropertyBinding.cs">
+      <Link>UI\Data\OneWayReactivePropertyBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\OneWayReactivePropertyBindingWithConversion.cs">
+      <Link>UI\Data\OneWayReactivePropertyBindingWithConversion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\OneWayToSourceBinding.cs">
+      <Link>UI\Data\OneWayToSourceBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\OneWayToSourceReactivePropertyBinding.cs">
+      <Link>UI\Data\OneWayToSourceReactivePropertyBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\OneWayToSourceReactivePropertyBindingWithConversion.cs">
+      <Link>UI\Data\OneWayToSourceReactivePropertyBindingWithConversion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\PropertyChangedEventArgs.cs">
+      <Link>UI\Data\PropertyChangedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\TwoWayBinding.cs">
+      <Link>UI\Data\TwoWayBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\TwoWayReactivePropertyBinding.cs">
+      <Link>UI\Data\TwoWayReactivePropertyBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Data\ValueChangedBehaviorSubject.cs">
+      <Link>UI\Data\ValueChangedBehaviorSubject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\ElementCollection.cs">
+      <Link>UI\ElementCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Extensions\IElementExtensions.cs">
+      <Link>UI\Extensions\IElementExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\IDrawingContext.cs">
+      <Link>UI\Graphics\IDrawingContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\IPrimitivesService.cs">
+      <Link>UI\Graphics\IPrimitivesService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\IRenderer.cs">
+      <Link>UI\Graphics\IRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\ISpriteBatch.cs">
+      <Link>UI\Graphics\ISpriteBatch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\ISpriteFont.cs">
+      <Link>UI\Graphics\ISpriteFont.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\ISpriteJob.cs">
+      <Link>UI\Graphics\ISpriteJob.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Graphics\ITexture.cs">
+      <Link>UI\Graphics\ITexture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\GridLength.cs">
+      <Link>UI\GridLength.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\GridUnitType.cs">
+      <Link>UI\GridUnitType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\HorizontalAlignment.cs">
+      <Link>UI\HorizontalAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\IElement.cs">
+      <Link>UI\IElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Input\Gesture.cs">
+      <Link>UI\Input\Gesture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Input\GestureType.cs">
+      <Link>UI\Input\GestureType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Input\IInputElement.cs">
+      <Link>UI\Input\IInputElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Input\IInputManager.cs">
+      <Link>UI\Input\IInputManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\Controls\ScrollData.cs">
+      <Link>UI\Internal\Controls\ScrollData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\Controls\Viewbox.cs">
+      <Link>UI\Internal\Controls\Viewbox.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\DoubleExtensions.cs">
+      <Link>UI\Internal\DoubleExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\IEnumerableExtensions.cs">
+      <Link>UI\Internal\IEnumerableExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\MinMax.cs">
+      <Link>UI\Internal\MinMax.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\PropertyStore.cs">
+      <Link>UI\Internal\PropertyStore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\RectExtensions.cs">
+      <Link>UI\Internal\RectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\SizeExtensions.cs">
+      <Link>UI\Internal\SizeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\ThicknessExtensions.cs">
+      <Link>UI\Internal\ThicknessExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Internal\VectorExtensions.cs">
+      <Link>UI\Internal\VectorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\IReactiveObject.cs">
+      <Link>UI\IReactiveObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\IReactiveProperty.cs">
+      <Link>UI\IReactiveProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\IRootElement.cs">
+      <Link>UI\IRootElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\ITemplatedList.cs">
+      <Link>UI\ITemplatedList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\License.cs">
+      <Link>UI\License.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\Brush.cs">
+      <Link>UI\Media\Brush.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\Color.cs">
+      <Link>UI\Media\Color.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\Colors.cs">
+      <Link>UI\Media\Colors.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\ImageSource.cs">
+      <Link>UI\Media\ImageSource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\Imaging\BitmapSource.cs">
+      <Link>UI\Media\Imaging\BitmapSource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\Imaging\TextureImage.cs">
+      <Link>UI\Media\Imaging\TextureImage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\SolidColorBrush.cs">
+      <Link>UI\Media\SolidColorBrush.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Media\Stretch.cs">
+      <Link>UI\Media\Stretch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Point.cs">
+      <Link>UI\Point.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\ReactiveObject.cs">
+      <Link>UI\ReactiveObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\ReactiveProperty.cs">
+      <Link>UI\ReactiveProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\ReactivePropertyChangedCallbacks.cs">
+      <Link>UI\ReactivePropertyChangedCallbacks.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\ReactivePropertyChangeEventArgs.cs">
+      <Link>UI\ReactivePropertyChangeEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Rect.cs">
+      <Link>UI\Rect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Size.cs">
+      <Link>UI\Size.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\TextWrapping.cs">
+      <Link>UI\TextWrapping.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Thickness.cs">
+      <Link>UI\Thickness.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\UIElement.cs">
+      <Link>UI\UIElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\Vector.cs">
+      <Link>UI\Vector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\VerticalAlignment.cs">
+      <Link>UI\VerticalAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\UI\VirtualizingElementCollection.cs">
+      <Link>UI\VirtualizingElementCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\ViewBase.cs">
+      <Link>ViewBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MonoGameMVVM.WinRT\ViewModelBase.cs">
+      <Link>ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\WindowsPhone\ARM\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.1.30214.0\lib\WP8\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.1.30214.0\lib\WP8\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.1.30214.0\lib\WP8\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.1.30214.0\lib\WP8\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="MonoGame_RemoveXnaAssemblies" AfterTargets="ImplicitlyExpandTargetFramework">
+    <Message Text="MonoGame - Removing XNA Assembly references!" Importance="normal" />
+    <ItemGroup>
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServices.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.GamerServicesExtensions.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.Input.Touch.dll'" />
+      <ReferencePath Remove="@(ReferencePath)" Condition="'%(Filename)%(Extension)'=='Microsoft.Xna.Framework.MediaLibraryExtensions.dll'" />
+    </ItemGroup>
+  </Target>
+</Project>

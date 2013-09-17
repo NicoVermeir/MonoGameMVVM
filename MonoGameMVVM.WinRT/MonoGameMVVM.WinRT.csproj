@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C415446-BDF5-4FFC-B8F0-F756E473261F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoGameMVVM.WinRT</RootNamespace>
+    <AssemblyName>MonoGameMVVM.WinRT</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Framework\HandleInputResult.cs" />
+    <Compile Include="Framework\InputState.cs" />
+    <Compile Include="Framework\TextureManager.cs" />
+    <Compile Include="Helpers\IExecuteWithObject.cs" />
+    <Compile Include="Helpers\WeakAction.cs" />
+    <Compile Include="Helpers\WeakActionGeneric.cs" />
+    <Compile Include="Ioc\ISimpleIoc.cs" />
+    <Compile Include="Ioc\PreferredConstructor.cs" />
+    <Compile Include="Ioc\SimpleIoc.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="Messenger\IMessenger.cs" />
+    <Compile Include="Messenger\MessageBase.cs" />
+    <Compile Include="Messenger\Messenger.cs" />
+    <Compile Include="NavigationService\INavigationService.cs" />
+    <Compile Include="NavigationService\NavigationService.cs" />
+    <Compile Include="ScreenManager\IScreenManager.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="UI\Adapters\Graphics\DrawingContext.cs" />
+    <Compile Include="UI\Adapters\Graphics\PrimitivesService.cs" />
+    <Compile Include="UI\Adapters\Graphics\RectExtensions.cs" />
+    <Compile Include="UI\Adapters\Graphics\Renderer.cs" />
+    <Compile Include="UI\Adapters\Graphics\SpriteBatchAdapter.cs" />
+    <Compile Include="UI\Adapters\Graphics\SpriteFontAdapter.cs" />
+    <Compile Include="UI\Adapters\Graphics\SpriteFontJob.cs" />
+    <Compile Include="UI\Adapters\Graphics\SpriteImageJob.cs" />
+    <Compile Include="UI\Adapters\Graphics\SpriteTextureJob.cs" />
+    <Compile Include="UI\Adapters\Graphics\Texture2DAdapter.cs" />
+    <Compile Include="UI\Adapters\Graphics\ViewportExtensions.cs" />
+    <Compile Include="UI\Adapters\Input\InputManager.cs" />
+    <Compile Include="UI\Controls\Border.cs" />
+    <Compile Include="UI\Controls\Button.cs" />
+    <Compile Include="UI\Controls\Canvas.cs" />
+    <Compile Include="UI\Controls\ColumnDefinition.cs" />
+    <Compile Include="UI\Controls\ContentControl.cs" />
+    <Compile Include="UI\Controls\Control.cs" />
+    <Compile Include="UI\Controls\DefinitionBase.cs" />
+    <Compile Include="UI\Controls\Grid.cs" />
+    <Compile Include="UI\Controls\Image.cs" />
+    <Compile Include="UI\Controls\ItemsControl.cs" />
+    <Compile Include="UI\Controls\Orientation.cs" />
+    <Compile Include="UI\Controls\Panel.cs" />
+    <Compile Include="UI\Controls\Primitives\ButtonBase.cs" />
+    <Compile Include="UI\Controls\Primitives\IScrollInfo.cs" />
+    <Compile Include="UI\Controls\Primitives\ToggleButton.cs" />
+    <Compile Include="UI\Controls\RootElement.cs" />
+    <Compile Include="UI\Controls\RowDefinition.cs" />
+    <Compile Include="UI\Controls\ScrollContentPresenter.cs" />
+    <Compile Include="UI\Controls\ScrollViewer.cs" />
+    <Compile Include="UI\Controls\StackPanel.cs" />
+    <Compile Include="UI\Controls\StretchDirection.cs" />
+    <Compile Include="UI\Controls\TextBlock.cs" />
+    <Compile Include="UI\Controls\VirtualizingStackPanel.cs" />
+    <Compile Include="UI\Data\BindingFactory.cs" />
+    <Compile Include="UI\Data\BindingResolutionMode.cs" />
+    <Compile Include="UI\Data\IBinding.cs" />
+    <Compile Include="UI\Data\IDualChannel.cs" />
+    <Compile Include="UI\Data\INotifyPropertyChanged.cs" />
+    <Compile Include="UI\Data\IOneWayToSourceBinding.cs" />
+    <Compile Include="UI\Data\OneWayBinding.cs" />
+    <Compile Include="UI\Data\OneWayReactivePropertyBinding.cs" />
+    <Compile Include="UI\Data\OneWayReactivePropertyBindingWithConversion.cs" />
+    <Compile Include="UI\Data\OneWayToSourceBinding.cs" />
+    <Compile Include="UI\Data\OneWayToSourceReactivePropertyBinding.cs" />
+    <Compile Include="UI\Data\OneWayToSourceReactivePropertyBindingWithConversion.cs" />
+    <Compile Include="UI\Data\PropertyChangedEventArgs.cs" />
+    <Compile Include="UI\Data\TwoWayBinding.cs" />
+    <Compile Include="UI\Data\TwoWayReactivePropertyBinding.cs" />
+    <Compile Include="UI\Data\ValueChangedBehaviorSubject.cs" />
+    <Compile Include="UI\ElementCollection.cs" />
+    <Compile Include="UI\Extensions\IElementExtensions.cs" />
+    <Compile Include="UI\Graphics\IDrawingContext.cs" />
+    <Compile Include="UI\Graphics\IPrimitivesService.cs" />
+    <Compile Include="UI\Graphics\IRenderer.cs" />
+    <Compile Include="UI\Graphics\ISpriteBatch.cs" />
+    <Compile Include="UI\Graphics\ISpriteFont.cs" />
+    <Compile Include="UI\Graphics\ISpriteJob.cs" />
+    <Compile Include="UI\Graphics\ITexture.cs" />
+    <Compile Include="UI\GridLength.cs" />
+    <Compile Include="UI\GridUnitType.cs" />
+    <Compile Include="UI\HorizontalAlignment.cs" />
+    <Compile Include="UI\IElement.cs" />
+    <Compile Include="UI\Input\Gesture.cs" />
+    <Compile Include="UI\Input\GestureType.cs" />
+    <Compile Include="UI\Input\IInputElement.cs" />
+    <Compile Include="UI\Input\IInputManager.cs" />
+    <Compile Include="UI\Internal\Controls\ScrollData.cs" />
+    <Compile Include="UI\Internal\Controls\Viewbox.cs" />
+    <Compile Include="UI\Internal\DoubleExtensions.cs" />
+    <Compile Include="UI\Internal\IEnumerableExtensions.cs" />
+    <Compile Include="UI\Internal\MinMax.cs" />
+    <Compile Include="UI\Internal\PropertyStore.cs" />
+    <Compile Include="UI\Internal\RectExtensions.cs" />
+    <Compile Include="UI\Internal\SizeExtensions.cs" />
+    <Compile Include="UI\Internal\ThicknessExtensions.cs" />
+    <Compile Include="UI\Internal\VectorExtensions.cs" />
+    <Compile Include="UI\IReactiveObject.cs" />
+    <Compile Include="UI\IReactiveProperty.cs" />
+    <Compile Include="UI\IRootElement.cs" />
+    <Compile Include="UI\ITemplatedList.cs" />
+    <Compile Include="UI\License.cs" />
+    <Compile Include="UI\Media\Brush.cs" />
+    <Compile Include="UI\Media\Color.cs" />
+    <Compile Include="UI\Media\Colors.cs" />
+    <Compile Include="UI\Media\ImageSource.cs" />
+    <Compile Include="UI\Media\Imaging\BitmapSource.cs" />
+    <Compile Include="UI\Media\Imaging\TextureImage.cs" />
+    <Compile Include="UI\Media\SolidColorBrush.cs" />
+    <Compile Include="UI\Media\Stretch.cs" />
+    <Compile Include="UI\Point.cs" />
+    <Compile Include="UI\ReactiveObject.cs" />
+    <Compile Include="UI\ReactiveProperty.cs" />
+    <Compile Include="UI\ReactivePropertyChangedCallbacks.cs" />
+    <Compile Include="UI\ReactivePropertyChangeEventArgs.cs" />
+    <Compile Include="UI\Rect.cs" />
+    <Compile Include="UI\Size.cs" />
+    <Compile Include="UI\TextWrapping.cs" />
+    <Compile Include="UI\Thickness.cs" />
+    <Compile Include="UI\UIElement.cs" />
+    <Compile Include="UI\Vector.cs" />
+    <Compile Include="UI\VerticalAlignment.cs" />
+    <Compile Include="UI\VirtualizingElementCollection.cs" />
+    <Compile Include="ViewBase.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LocatorBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\MvvmLightLibs.4.1.27.0\lib\netcore45\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.1.30214.0\lib\NetCore45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.1.30214.0\lib\NetCore45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.1.30214.0\lib\NetCore45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.1.30214.0\lib\NetCore45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

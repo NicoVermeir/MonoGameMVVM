@@ -1,0 +1,124 @@
+#region License
+
+/* The MIT License
+ *
+ * Copyright (c) 2011 Red Badger Consulting
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+*/
+
+#endregion
+
+using System;
+using System.Collections.Generic;
+using MonoGameMVVM.UI.Graphics;
+using MonoGameMVVM.UI.Media;
+
+namespace MonoGameMVVM.UI.Adapters.Xna.Graphics
+{
+    public class DrawingContext : IDrawingContext
+    {
+        private readonly IElement element;
+
+        private readonly IList<ISpriteJob> jobs = new List<ISpriteJob>();
+
+        private readonly IPrimitivesService primitivesService;
+
+        private Rect absoluteClippingRect = Rect.Empty;
+
+        private Vector absoluteOffset;
+
+        public DrawingContext(IElement element, IPrimitivesService primitivesService)
+        {
+            if (element == null)
+            {
+                throw new ArgumentNullException("element");
+            }
+
+            if (primitivesService == null)
+            {
+                throw new ArgumentNullException("primitivesService");
+            }
+
+            this.element = element;
+            this.primitivesService = primitivesService;
+        }
+
+        public Rect AbsoluteClippingRect
+        {
+            get { return absoluteClippingRect; }
+
+            set { absoluteClippingRect = value; }
+        }
+
+        public Vector AbsoluteOffset
+        {
+            get { return absoluteOffset; }
+
+            set { absoluteOffset = value; }
+        }
+
+        public IElement Element
+        {
+            get { return element; }
+        }
+
+        public void DrawImage(ImageSource imageSource, Rect rect)
+        {
+            jobs.Add(new SpriteImageJob(imageSource, rect));
+        }
+
+        public void DrawRectangle(Rect rect, Brush brush)
+        {
+            jobs.Add(new SpriteTextureJob(primitivesService.SinglePixel, rect, brush));
+        }
+
+        public void DrawText(ISpriteFont spriteFont, string text, Point position, Brush brush)
+        {
+            jobs.Add(new SpriteFontJob(spriteFont, text, position, brush));
+        }
+
+        public void Clear()
+        {
+            jobs.Clear();
+        }
+
+        public void ClearIfInvalid()
+        {
+            if (!element.IsArrangeValid)
+            {
+                Clear();
+            }
+        }
+
+        public void Draw(ISpriteBatch spriteBatch)
+        {
+            Rect clippingRect = absoluteClippingRect;
+            if (spriteBatch.TryIntersectViewport(ref clippingRect))
+            {
+                spriteBatch.Begin(clippingRect);
+
+                foreach (ISpriteJob spriteJob in jobs)
+                {
+                    spriteJob.Draw(spriteBatch, absoluteOffset);
+                }
+            }
+        }
+    }
+}
