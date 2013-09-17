@@ -179,7 +179,7 @@ namespace MonoGameMVVM.WinRT
             return _currentMouseState.ScrollWheelValue - _lastMouseState.ScrollWheelValue;
         }
 
-        public bool IsNewMouseDelta(out int x, out int y)
+        public bool IsNewMouseDelta(out int x, out int y) 
         {
             x = _currentMouseState.X - _lastMouseState.X;
             y = _currentMouseState.Y - _lastMouseState.Y;
