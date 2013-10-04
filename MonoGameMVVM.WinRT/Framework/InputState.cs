@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
-namespace MonoGameMVVM.WinRT
+namespace MonoGameMVVM
 {
     public class InputState
     {

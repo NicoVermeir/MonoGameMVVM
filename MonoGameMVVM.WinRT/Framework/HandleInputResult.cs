@@ -1,4 +1,4 @@
-﻿namespace MonoGameMVVM.WinRT
+﻿namespace MonoGameMVVM
 {
     public enum HandleInputResult
     {

@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MonoGameMVVM.WinRT
+namespace MonoGameMVVM
 {
     public static class TextureManager
     {

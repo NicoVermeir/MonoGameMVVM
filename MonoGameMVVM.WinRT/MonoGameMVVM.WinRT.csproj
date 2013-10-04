@@ -107,6 +107,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Debug\DebugDraw.cs" />
     <Compile Include="Framework\HandleInputResult.cs" />
     <Compile Include="Framework\InputState.cs" />
     <Compile Include="Framework\TextureManager.cs" />
